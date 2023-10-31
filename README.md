@@ -8,4 +8,4 @@ Currently developed by
 - [essayharper](https://github.com/essayharper), [atesquik](https://github.com/atesquik)
 - [Rayz0rum](https://github.com/Spider-Sonic) and thesleety [sleety's official server](https://discord.gg/DU4Ms2W5Yk)
 
-- [official server](https://discord.gg/NjCqabfFzs)
+ [official server](https://discord.gg/NjCqabfFzs)
