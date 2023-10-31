@@ -6,4 +6,6 @@ currently attempting for it to be as close as possible
 Currently developed by 
 - [Lollio64](https://github.com/Lollio64), [Juanen100](https://github.com/Juanen100)
 - [essayharper](https://github.com/essayharper), [atesquik](https://github.com/atesquik)
-- [Rayz0rum](https://github.com/Spider-Sonic) and thesleety
+- [Rayz0rum](https://github.com/Spider-Sonic) and thesleety [sleety's official server](https://discord.gg/DU4Ms2W5Yk)
+
+- [official server](https://discord.gg/NjCqabfFzs)
