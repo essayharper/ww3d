@@ -5,7 +5,7 @@ We're trying to be as close to the original as possible, just note that we don't
 # Building Info 
 First install the devkitARM toolchains and 3DS libraries on you system.<br>
 Here is a installation guide: [Click here](https://www.3dbrew.org/wiki/Setting_up_Development_Environment).<br>
-Then run the Makefile....For Windows you probably need WSL.<br>
+Then run the Makefile....For Windows you probably need Windows Subsystem for Linux.<br>
 You will obtain the .3dsx version of WW3D, for the .cia version you need makerom.<br>
 # Credits 
 Currently developed by 
