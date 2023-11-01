@@ -1,7 +1,7 @@
 # The Legend of Zelda Wind Waker 3D
 A 3DS remake of Wind Waker.<br>
 Originally developed for the Nintendo DS, essayharper moved development to the 3DS.<br>
-We're trying to be as close to the original as possible, just note that we don't have access to the original source code.<br>
+We're trying to be as close to the original as possible, just note that we don't have access to the original source code, despite essayharper's limited knowledge about the inner workings of the gamecube version.<br>
 # Building Info 
 First install the devkitARM toolchains and 3DS libraries on you system.<br>
 Here is a installation guide: [Click here](https://www.3dbrew.org/wiki/Setting_up_Development_Environment).<br>
