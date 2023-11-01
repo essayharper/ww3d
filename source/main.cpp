@@ -2,8 +2,6 @@
 
 // Standard include files
 #include <iostream>
-#include <cstdlib>
-#include <cstdio>
 
 // devkitPro include files
 #include <3ds.h>
@@ -33,7 +31,7 @@ int main() {
     C3D_RenderTargetSetOutput(leftTarget, GFX_TOP, GFX_LEFT, DISPLAY_TRANSFER_FLAGS);
 
     // Print stuff
-    printf("Initializing Scene...\n");
+    std::cout << "Initializing Scene..." << "\n";
 
     // Main Loop
     while(aptMainLoop()) {
@@ -49,7 +47,7 @@ int main() {
     };
 
     // Print stuff
-    printf("Deinitializing Scene...\n");
+    std::cout << "Deinitializing Scene..." << "\n";
      
     // Deinit romfs
     romfsExit();
