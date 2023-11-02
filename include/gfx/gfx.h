@@ -7,13 +7,15 @@
 // Default includes
 #include <iostream>
 
-// devkitPro include
+// devkitPro includes
 #include <citro3d.h>
+#include <vshader_shbin.h>
 
 // Custom includes
-#include <engine/vector.h>
+#include <engine/vertex.h>
 
 namespace gfx {
+    const bool leftHand = false; 
     class GFX {
         public:
         GFX();
@@ -23,6 +25,13 @@ namespace gfx {
         DVLB_s* vshader_dvlb;
         shaderProgram_s program;
         int uLoc_projection, uLoc_modelView;
+
+        // Camera struct
+        struct cam {
+            C3D_FVec camPos;
+            C3D_FVec camTarget;
+            C3D_FVec lightPos;
+        };
         
         // Matrices
         C3D_Mtx modelView;
@@ -31,12 +40,13 @@ namespace gfx {
         // Lighting
         C3D_LightEnv lightEnv;
         C3D_Light light;
+        C3D_LightLut lut_Phong;
         C3D_LightLut lut_Spec; 
         C3D_LightLut lut_Toon;
-
+ 
+        // Buffer Objects
         static void* vbo_data;
         static void* ibo_data;
-    }
-}
-
+    };
+};
 #endif
