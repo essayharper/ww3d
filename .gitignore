@@ -1,3 +1,10 @@
 # Ignore VSCode and build files
 .vscode/
 build/
+
+# Ignore compiled binaries
+*.smdh
+*.cia
+*.3dsx
+*.elf
+*.cxi
