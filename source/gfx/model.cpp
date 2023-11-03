@@ -20,19 +20,22 @@ model::model(std::string filename) {
             model::ss >> model::prefix;
  
         if (model::prefix == "#") {
-                // Do nothing
+            // Do nothing
         } else if (prefix == "v") {
-                ss >> pos.x >> pos.y >> pos.z >> comment >> tex.u >> tex.v >> comment >> nrm.x >> nrm.y >> nrm.z;
-                model::mdlfPosition.push_back(pos.x);
-                model::mdlfPosition.push_back(pos.y);
-                model::mdlfPosition.push_back(pos.z);
-                model::mdlfTexcoords.push_back(tex.u);
-                model::mdlfTexcoords.push_back(tex.v);
-                model::mdlfNormals.push_back(nrm.x);
-                model::mdlfNormals.push_back(nrm.y);
-                model::mdlfNormals.push_back(nrm.z);
+            ss >> pos.x >> pos.y >> pos.z >> comment >> tex.u >> tex.v >> comment >> nrm.x >> nrm.y >> nrm.z;
+            model::mdlfPosition.push_back(pos.x);
+            model::mdlfPosition.push_back(pos.y);
+            model::mdlfPosition.push_back(pos.z);
+            model::mdlfTexcoords.push_back(tex.u);
+            model::mdlfTexcoords.push_back(tex.v);
+            model::mdlfNormals.push_back(nrm.x);
+            model::mdlfNormals.push_back(nrm.y);
+            model::mdlfNormals.push_back(nrm.z);
         } else if (prefix == "i") {
-            // Comment
+            ss >> ind.a >> ind.b >> ind.c;
+            model::mdlfIndices.push_back(ind.a);
+            model::mdlfIndices.push_back(ind.b);
+            model::mdlfIndices.push_back(ind.c);
         };
     };
    mdlfFile.close(); 
