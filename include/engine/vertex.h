@@ -12,15 +12,15 @@ class vertex {
     };
 
     struct texcoords {
-        float uvx, uvy;
+        float u, v;
     };
 
     struct normals {
-        float nx, ny, nz;
+        float x, y, z;
     };
 
     struct color {
-        float r, g, b;
+        float r, g, b, a;
     };
 };
 #endif
