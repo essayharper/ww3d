@@ -22,6 +22,7 @@ You will obtain the .3dsx version of WW3D, for the .cia version you need makerom
 <tr><td>Blender</td><td>https://blender.org</td></tr>
 </table>
 <table align = "center">
+<tr><td>Username</td><td>Profile</td></tr>
 <tr><td>Lollio64(Coder)</td><td>https://github.com/Lollio64</td></tr> 
 <tr><td>Juanen100(Coder?)</td><td>https://github.com/Juanen100</td></tr>
 <tr><td>essayharper(3D Modeler</td><td>https://github.com/essayharper</td></tr> 
