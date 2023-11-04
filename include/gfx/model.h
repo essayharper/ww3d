@@ -25,9 +25,12 @@ class model {
     vertex::texcoords tex;
     vertex::normals nrm;
     vertex::color clr;
-    idx ind;
 
-    unsigned int indices;
+    unsigned int tempIdxA;
+    unsigned int tempIdxB;
+    unsigned int tempIdxC;
+
+    unsigned int maxIndices;
 
     std::vector<float> mdlfPosition;
     std::vector<float> mdlfTexcoords;
