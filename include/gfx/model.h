@@ -6,6 +6,8 @@
 #include <sstream>
 #include <vector>
 
+#include <citro3d.h>
+
 #include "gfx.h"
 #include "engine/vertex.h"
 
@@ -37,5 +39,11 @@ class model {
     std::vector<float> mdlfNormals;
     std::vector<float>mdlfVertices;
     std::vector<unsigned int> mdlfIndices;
+    private:
+    C3D_Tex texData;
+    C3D_TexCube cube; 
+    const void* data; 
+    size_t size;
+    static bool loadTexFromMem(C3D_Tex* texData, C3D_TexCube* cube, const void* data, size_t size);
 };
 #endif
