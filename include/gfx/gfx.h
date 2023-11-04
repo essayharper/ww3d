@@ -46,9 +46,9 @@ namespace gfx {
         C3D_LightLut lut_Spec; 
         C3D_LightLut lut_Toon;
  
-        /* Buffer Objects
+        // Buffer Objects
         static void* vbo_data;
-        static void* ibo_data;*/
+        //static void* ibo_data;
     };
 };
 #endif
