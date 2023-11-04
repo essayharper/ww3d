@@ -3,11 +3,11 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <vector>
 
 #include "gfx.h"
 #include "engine/vertex.h"
-#include "engine/vector.h"
 
 class model {
     public:
@@ -25,11 +25,14 @@ class model {
     vertex::texcoords tex;
     vertex::normals nrm;
     vertex::color clr;
+    idx ind;
 
-    std::vector<vec3> mdlfPosition;
-    std::vector<vec2> mdlfTexcoords;
-    std::vector<vec3> mdlfNormals;
+    unsigned int indices;
+
+    std::vector<float> mdlfPosition;
+    std::vector<float> mdlfTexcoords;
+    std::vector<float> mdlfNormals;
     std::vector<float>mdlfVertices;
-    std::vector<idx> mdlfIndices;
+    std::vector<unsigned int> mdlfIndices;
 };
 #endif
