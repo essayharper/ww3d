@@ -15,7 +15,6 @@
 #include <engine/vertex.h>
 
 namespace gfx {
-    const bool leftHand = false; 
     class GFX {
         public:
         GFX();
@@ -33,6 +32,9 @@ namespace gfx {
             C3D_FVec lightPos;
         };
         
+        // Texture
+        C3D_Tex* texture;
+
         // Matrices
         C3D_Mtx modelView;
         C3D_Mtx projection;
@@ -44,9 +46,9 @@ namespace gfx {
         C3D_LightLut lut_Spec; 
         C3D_LightLut lut_Toon;
  
-        // Buffer Objects
+        /* Buffer Objects
         static void* vbo_data;
-        static void* ibo_data;
+        static void* ibo_data;*/
     };
 };
 #endif
