@@ -12,7 +12,7 @@ Here is a installation guide: [Click here](https://www.3dbrew.org/wiki/Setting_u
 Then run the Makefile....For Windows you probably need Windows Subsystem for Linux.<br>
 You will obtain the .3dsx version of WW3D, for the .cia version you need makerom.<br>
 # Credits 
-<table align = "center">
+<table align = "left">
 <tr><td>Tools and Libraries</td><td>Links</td></tr>
 <tr><td>libctru</td><td>https://github.com/devkitPro/libctru</td></tr>
 <tr><td>citro3d</td><td>https://github.com/devkitPro/citro3d</td></tr>
@@ -21,7 +21,7 @@ You will obtain the .3dsx version of WW3D, for the .cia version you need makerom
 <tr><td>cwavtool</td><td>https://github.com/PabloMK7/cwavtool</td></tr>
 <tr><td>Blender</td><td>https://blender.org</td></tr>
 <tr><td>SketchUp</td><td>https://www.sketchup.com/</td></tr></table>
-<table align = "center">
+<table align = "left">
 <tr><td>Username</td><td>Profile</td></tr>
 <tr><td>Lollio64(Programer)</td><td>https://github.com/Lollio64</td></tr> 
 <tr><td>Juanen100(Programmer, Moral Support)</td><td>https://github.com/Juanen100</td></tr>
