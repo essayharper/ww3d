@@ -12,15 +12,20 @@ Here is a installation guide: [Click here](https://www.3dbrew.org/wiki/Setting_u
 Then run the Makefile....For Windows you probably need Windows Subsystem for Linux.<br>
 You will obtain the .3dsx version of WW3D, for the .cia version you need makerom.<br>
 # Credits 
-### Libraries
-- [libctru](https://github.com/devkitPro/libctru)
-- [citro3d](https://github.com/devkitPro/citro3d)
-- [citro2d](https://github.com/devkitPro/citro2d)
-- [libcwav](https://github.com/PabloMK7/libcwav)
-### Tools
-- [cwavtool](https://github.com/PabloMK7/cwavtool)
-- [Blender](https://blender.org)
-### Developers
-- [Lollio64](https://github.com/Lollio64)(Coder), [Juanen100](https://github.com/Juanen100)(Coder?)
-- [essayharper](https://github.com/essayharper)(3D Modeler), [atesquik](https://github.com/atesquik)(Coder?)
-- [Rayz0rum](https://github.com/Spider-Sonic)(Coder?) and [the sleety(His server, because he has no GitHub account)](https://discord.gg/DU4Ms2W5Yk)(Coder?)
+<table align = "center">
+<tr><td>Tools and Libraries</td><td>Links</td></tr>
+<tr><td>libctru</td><td>https://github.com/devkitPro/libctru</td></tr>
+<tr><td>citro3d</td><td>https://github.com/devkitPro/citro3d</td></tr>
+<tr><td>citro2d</td><td>https://github.com/devkitPro/citro2d</td></tr>
+<tr><td>libcwav</td><td>https://github.com/PabloMK7/libcwav</td></tr>
+<tr><td>cwavtool</td><td>https://github.com/PabloMK7/cwavtool</td></tr>
+<tr><td>Blender</td><td>https://blender.org</td></tr>
+</table>
+<table align = "center">
+<tr><td>Lollio64(Coder)</td><td>https://github.com/Lollio64</td></tr> 
+<tr><td>Juanen100(Coder?)</td><td>https://github.com/Juanen100</td></tr>
+<tr><td>essayharper(3D Modeler</td><td>https://github.com/essayharper</td></tr> 
+<tr><td>atesquik(Coder?)</td><td>https://github.com/atesquik</td></tr>
+<tr><td>Rayz0rum(Coder?)</td><td>https://github.com/Spider-Sonic</td></tr> 
+<tr><td>The Sleety(Coder?)</td><td>https://discord.gg/DU4Ms2W5Yk (Discord Server)</td></tr>
+</table>
