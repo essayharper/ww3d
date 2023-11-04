@@ -23,10 +23,10 @@ You will obtain the .3dsx version of WW3D, for the .cia version you need makerom
 <tr><td>SketchUp</td><td>https://www.sketchup.com/</td></tr></table>
 <table align = "center">
 <tr><td>Username</td><td>Profile</td></tr>
-<tr><td>Lollio64(Coder)</td><td>https://github.com/Lollio64</td></tr> 
-<tr><td>Juanen100(Coder?)</td><td>https://github.com/Juanen100</td></tr>
-<tr><td>essayharper(3D Modeler</td><td>https://github.com/essayharper</td></tr> 
-<tr><td>atesquik(Coder?)</td><td>https://github.com/atesquik</td></tr>
-<tr><td>Rayz0rum(Coder?)</td><td>https://github.com/Spider-Sonic</td></tr> 
-<tr><td>The Sleety(Coder?)</td><td>https://discord.gg/DU4Ms2W5Yk (Discord Server)</td></tr>
+<tr><td>Lollio64(Programer)</td><td>https://github.com/Lollio64</td></tr> 
+<tr><td>Juanen100(Programmer, Moral Support)</td><td>https://github.com/Juanen100</td></tr>
+<tr><td>essayharper(3D Modeler, Texture/Ui Design)</td><td>https://github.com/essayharper</td></tr> 
+<tr><td>atesquik(Programmer, Ui Design)</td><td>https://github.com/atesquik</td></tr>
+<tr><td>Rayz0rum(Texture/Ui Design)</td><td>https://github.com/Spider-Sonic</td></tr> 
+<tr><td>The Sleety(Programmer)</td><td>https://discord.gg/DU4Ms2W5Yk (Discord Server)</td></tr>
 </table>
