@@ -13,7 +13,7 @@
 
 // Helper function for loading a texture from memory
 static bool loadTextureFromMem(C3D_Tex* texture, C3D_TexCube* cube, const void* data, size_t size) {
-	Tex3DS_Texture t3x = Tex3DS_TextureImport(data, size, tex, cube, false);
+	Tex3DS_Texture t3x = Tex3DS_TextureImport(data, size, texture, cube, false);
 	if (!t3x) {
 		return false;
     };
@@ -22,7 +22,7 @@ static bool loadTextureFromMem(C3D_Tex* texture, C3D_TexCube* cube, const void* 
 	return true;
 };
 
-model::model(std::string filename, std::string texname) {
+model::model(std::string filename) {
     // Open the file
     std::ifstream mdlfFile(filename);
 
@@ -34,7 +34,7 @@ model::model(std::string filename, std::string texname) {
  
         if (model::prefix == "#") {
             // Do nothing
-        } else if (prefix == "v") {
+        } else if (model::prefix == "v") {
             ss >> pos.x >> pos.y >> pos.z >> comment >> tex.u >> tex.v >> comment >> nrm.x >> nrm.y >> nrm.z;
             model::mdlfPosition.push_back(pos.x);
             model::mdlfPosition.push_back(pos.y);
@@ -44,11 +44,11 @@ model::model(std::string filename, std::string texname) {
             model::mdlfNormals.push_back(nrm.x);
             model::mdlfNormals.push_back(nrm.y);
             model::mdlfNormals.push_back(nrm.z);
-        } else if (prefix == "i") {
-            ss >> ind.a >> ind.b >> ind.c;
-            model::mdlfIndices.push_back(ind.a);
-            model::mdlfIndices.push_back(ind.b);
-            model::mdlfIndices.push_back(ind.c);
+        } else if (model::prefix == "i") {
+            ss >> model::tempIdxA >> model::tempIdxB >> model::tempIdxC;
+            model::mdlfIndices.push_back(model::tempIdxA);
+            model::mdlfIndices.push_back(model::tempIdxB);
+            model::mdlfIndices.push_back(model::tempIdxC);
         };
     };
    mdlfFile.close(); 
@@ -65,12 +65,12 @@ void model::render(gfx::GFX &gfx) {
     // Configure buffers
 	C3D_BufInfo* bufInfo = C3D_GetBufInfo();
 	BufInfo_Init(bufInfo);
-	BufInfo_Add(bufInfo, vbo_data, sizeof(vertex), 3, 0x210);
+	BufInfo_Add(bufInfo, &gfx::GFX::vbo_data, sizeof(vertex), 3, 0x210);
 
 	C3D_TexEnv* env = C3D_GetTexEnv(0);
 	C3D_TexEnvInit(env);
-    C3D_TexBind(0, &texture);
-	C3D_TexEnvSrc(env, C3D_Both, GPU_TEXTURE0, GPU_PRIMARY_COLOR, 0);
+    C3D_TexBind(0, &gfx::GFX::texture);
+	C3D_TexEnvSrc(env, C3D_Both, GPU_TEXTURE0, GPU_PRIMARY_COLOR, GPU_FRAGMENT_SECONDARY_COLOR);
 	C3D_TexEnvFunc(env, C3D_Both, GPU_MODULATE);
 
     // Render Vertex Array, if the Index Array is empty
@@ -82,9 +82,10 @@ void model::render(gfx::GFX &gfx) {
 };
 
 model::~model() {
-    // Clear the vectors to free up some mem space 
+    // Clear the vectors to free up some mem space before the object gets deleted
     mdlfPosition.clear();
     mdlfTexcoords.clear();
     mdlfNormals.clear();
     mdlfIndices.clear();
+    mdlfVertices.clear();
 };
