@@ -20,7 +20,7 @@ You will obtain the .3dsx version of WW3D, for the .cia version you need makerom
 <tr><td>libcwav</td><td>https://github.com/PabloMK7/libcwav</td></tr>
 <tr><td>cwavtool</td><td>https://github.com/PabloMK7/cwavtool</td></tr>
 <tr><td>Blender</td><td>https://blender.org</td></tr>
-</table>
+<tr><td>SketchUp</td><td>https://www.sketchup.com/</td></tr></table>
 <table align = "center">
 <tr><td>Username</td><td>Profile</td></tr>
 <tr><td>Lollio64(Coder)</td><td>https://github.com/Lollio64</td></tr> 
