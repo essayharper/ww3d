@@ -53,6 +53,14 @@ model::model(std::string filename) {
         };
     };
    mdlfFile.close(); 
+
+   // Create the VBO (Vertex Buffer Object)
+	gfx::GFX::vbo_data = linearAlloc(sizeof(mdlfVertices));
+	memcpy(gfx::GFX::vbo_data, mdlfVertices.data(), sizeof(mdlfVertices));
+
+    // Create the IBO (Index Buffer Object)
+	gfx::GFX::ibo_data = linearAlloc(sizeof(mdlfIndices));
+	memcpy(gfx::GFX::ibo_data, mdlfIndices.data(), sizeof(mdlfIndices));
 };
 
 void model::render(gfx::GFX &gfx) {
@@ -96,6 +104,7 @@ model::~model() {
     // Free the texture
     C3D_TexDelete(&texData);
 
-    // Free the Vertex Buffer Object
+    // Free the Buffer Objects
     linearFree(gfx::GFX::vbo_data);
+    linearFree(gfx::GFX::ibo_data);
 };
