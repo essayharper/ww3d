@@ -48,7 +48,7 @@ namespace gfx {
  
         // Buffer Objects
         static void* vbo_data;
-        //static void* ibo_data;
+        static void* ibo_data;
     };
 };
 #endif
