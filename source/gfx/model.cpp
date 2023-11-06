@@ -11,6 +11,7 @@
 #include <vshader_shbin.h>
 #include <gfx/model.h>
 #include <gfx/gfx.h>
+#include "model.h"
 
 // Helper function for loading a texture from memory
 bool loadTexFromMem(C3D_Tex* texData, C3D_TexCube* cube, const void* data, size_t size) {
@@ -83,6 +84,7 @@ void model::render(gfx::GFX &gfx) {
         svcBreak(USERBREAK_PANIC);
     };
     C3D_TexBind(0, &texData);
+    C3D_TexSetFilter(&texData, GPU_NEAREST, GPU_NEAREST);
 	C3D_TexEnvSrc(env, C3D_Both, GPU_TEXTURE0, GPU_PRIMARY_COLOR, 0);
 	C3D_TexEnvFunc(env, C3D_Both, GPU_MODULATE);
 
@@ -90,7 +92,7 @@ void model::render(gfx::GFX &gfx) {
     if(mdlfIndices.empty()) {
         C3D_DrawArrays(GPU_TRIANGLES, 0, mdlfVertices.size());
     } else {
-        C3D_DrawElements(GPU_TRIANGLES, mdlfIndices.size(), C3D_UNSIGNED_SHORT, mdlfIndices.data());
+        C3D_DrawElements(GPU_TRIANGLES, mdlfIndices.size(), C3D_UNSIGNED_SHORT, &gfx::GFX::ibo_data);
     };
 };
 
