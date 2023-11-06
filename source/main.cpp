@@ -42,7 +42,7 @@ int main() {
     std::cout << "Instantiated objects successfully!" << "\n";
 
     C3D_Tex waterwaveTex;
-    testMDL.loadTexFromMem(&waterwaveTex, NULL, waterwave_t3x, waterwave_t3x_size);
+    testMDL.loadTexFromMem(&waterwaveTex, NULL, sprites_t3x, sprites_t3x_size);
 
     // Main Loop
     while(aptMainLoop()) {
