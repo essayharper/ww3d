@@ -13,7 +13,7 @@
 #include <gfx/gfx.h>
 
 // Helper function for loading a texture from memory
-static bool loadTexFromMem(C3D_Tex* texData, C3D_TexCube* cube, const void* data, size_t size) {
+bool loadTexFromMem(C3D_Tex* texData, C3D_TexCube* cube, const void* data, size_t size) {
 	Tex3DS_Texture t3x = Tex3DS_TextureImport(data, size, texData, cube, false);
 	if (!t3x) {
 		return false;
@@ -23,6 +23,7 @@ static bool loadTexFromMem(C3D_Tex* texData, C3D_TexCube* cube, const void* data
 	return true;
 };
 
+// Parse the .mdlf file, in the future I need to bone support
 model::model(std::string filename) {
     // Open the file
     std::ifstream mdlfFile(filename);
@@ -37,14 +38,14 @@ model::model(std::string filename) {
             // Do nothing
         } else if (prefix == "v") {
             ss >> pos.x >> pos.y >> pos.z >> comment >> tex.u >> tex.v >> comment >> nrm.x >> nrm.y >> nrm.z;
-            mdlfPosition.push_back(pos.x);
-            mdlfPosition.push_back(pos.y);
-            mdlfPosition.push_back(pos.z);
-            mdlfTexcoords.push_back(tex.u);
-            mdlfTexcoords.push_back(tex.v);
-            mdlfNormals.push_back(nrm.x);
-            mdlfNormals.push_back(nrm.y);
-            mdlfNormals.push_back(nrm.z);
+            mdlfVertices.push_back(pos.x);
+            mdlfVertices.push_back(pos.y);
+            mdlfVertices.push_back(pos.z);
+            mdlfVertices.push_back(tex.u);
+            mdlfVertices.push_back(tex.v);
+            mdlfVertices.push_back(nrm.x);
+            mdlfVertices.push_back(nrm.y);
+            mdlfVertices.push_back(nrm.z);
         } else if (prefix == "i") {
             ss >> tempIdxA >> tempIdxB >> tempIdxC;
             mdlfIndices.push_back(tempIdxA);
@@ -55,12 +56,12 @@ model::model(std::string filename) {
    mdlfFile.close(); 
 
    // Create the VBO (Vertex Buffer Object)
-	gfx::GFX::vbo_data = linearAlloc(sizeof(mdlfVertices));
-	memcpy(gfx::GFX::vbo_data, mdlfVertices.data(), sizeof(mdlfVertices));
+   gfx::GFX::vbo_data = linearAlloc(sizeof(mdlfVertices));
+   memcpy(gfx::GFX::vbo_data, mdlfVertices.data(), sizeof(mdlfVertices));
 
-    // Create the IBO (Index Buffer Object)
-	gfx::GFX::ibo_data = linearAlloc(sizeof(mdlfIndices));
-	memcpy(gfx::GFX::ibo_data, mdlfIndices.data(), sizeof(mdlfIndices));
+   // Create the IBO (Index Buffer Object)
+   gfx::GFX::ibo_data = linearAlloc(sizeof(mdlfIndices));
+   memcpy(gfx::GFX::ibo_data, mdlfIndices.data(), sizeof(mdlfIndices));
 };
 
 void model::render(gfx::GFX &gfx) {
@@ -95,9 +96,6 @@ void model::render(gfx::GFX &gfx) {
 
 model::~model() {
     // Clear the vectors to free up some mem space before the object gets deleted
-    mdlfPosition.clear();
-    mdlfTexcoords.clear();
-    mdlfNormals.clear();
     mdlfIndices.clear();
     mdlfVertices.clear();
 
