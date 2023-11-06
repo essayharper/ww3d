@@ -41,6 +41,9 @@ int main() {
     model testMDL("romfs:/models/test.mdlf");
     std::cout << "Instantiated objects successfully!" << "\n";
 
+    C3D_Tex waterwaveTex;
+    testMDL.loadTexFromMem(&waterwaveTex, NULL, waterwave_t3x, waterwave_t3x_size);
+
     // Main Loop
     while(aptMainLoop()) {
         // Scan user input every frame
@@ -57,7 +60,7 @@ int main() {
 		C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
 		C3D_RenderTargetClear(leftTarget, C3D_CLEAR_ALL, CLEAR_COLOR, 0);
 		C3D_FrameDrawOn(leftTarget);
-		testMDL.render();
+		testMDL.render(gfx);
 		C3D_FrameEnd(0);
     };
 
