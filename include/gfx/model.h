@@ -34,16 +34,13 @@ class model {
 
     unsigned int maxIndices;
 
-    std::vector<float> mdlfPosition;
-    std::vector<float> mdlfTexcoords;
-    std::vector<float> mdlfNormals;
     std::vector<float>mdlfVertices;
     std::vector<unsigned int> mdlfIndices;
-    private:
+
     C3D_Tex texData;
     C3D_TexCube cube; 
     const void* data; 
     size_t size;
-    static bool loadTexFromMem(C3D_Tex* texData, C3D_TexCube* cube, const void* data, size_t size);
+    bool loadTexFromMem(C3D_Tex* texData, C3D_TexCube* cube, const void* data, size_t size);
 };
 #endif
