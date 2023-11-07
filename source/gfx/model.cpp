@@ -5,7 +5,6 @@
 #include <sstream>
 
 #include <3ds.h>
-#include <enums.h>
 #include <citro3d.h>
 #include <tex3ds.h>
 #include <vshader_shbin.h>
