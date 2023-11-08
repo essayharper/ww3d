@@ -37,10 +37,10 @@ class model {
     std::vector<float>mdlfVertices;
     std::vector<unsigned int> mdlfIndices;
 
-    C3D_Tex texData;
-    C3D_TexCube cube; 
-    const void* data; 
-    size_t size;
-    bool loadTexFromMem(C3D_Tex* texData, C3D_TexCube* cube, const void* data, size_t size);
+    C3D_Tex texture;
+    C3D_TexCube Cube; 
+    const void* Data;
+    size_t Size;
+    bool loadTexFromMem(C3D_Tex* tex, C3D_TexCube* cube, const void* data, size_t size);
 };
 #endif
