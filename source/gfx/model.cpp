@@ -62,7 +62,7 @@ model::model(std::string filename) {
    memcpy(gfx::GFX::ibo_data, mdlfIndices.data(), sizeof(mdlfIndices));
 
    if (!loadTexFromMem(&texture, &Cube, &Data, Size)) {
-        svcBreak(USERBREAK_PANIC);
+        //svcBreak(USERBREAK_PANIC);
    };
    C3D_TexSetFilter(&texture, GPU_NEAREST, GPU_NEAREST);
 };
@@ -82,7 +82,7 @@ void model::render(gfx::GFX &gfx) {
 
 	C3D_TexEnv* env = C3D_GetTexEnv(0);
 	C3D_TexEnvInit(env);
-    C3D_TexBind(0, &texture);
+        //C3D_TexBind(0, &texture);
 	C3D_TexEnvSrc(env, C3D_Both, GPU_TEXTURE0, GPU_PRIMARY_COLOR, GPU_FRAGMENT_PRIMARY_COLOR);
 	C3D_TexEnvFunc(env, C3D_Both, GPU_MODULATE);
 
