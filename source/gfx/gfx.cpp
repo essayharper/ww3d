@@ -4,6 +4,10 @@
 #include <gfx/gfx.h>
 #include <vshader_shbin.h>
 #include <citro3d.h>
+#include <3ds.h>
+
+void* gfx::GFX::vbo_data = NULL;
+void* gfx::GFX::ibo_data = NULL;
 
 gfx::GFX::GFX() {
     // Load the vertex shader, create a shader program and bind it
@@ -17,7 +21,7 @@ gfx::GFX::GFX() {
     uLoc_modelView  = shaderInstanceGetUniformLocation(program.vertexShader, "modelView");
 
     // Compute the projection matrix
-    Mtx_PerspTilt(&projection, C3D_AngleFromDegrees(80.0f), C3D_AspectRatioTop, 0.01f, 1000.0f, leftHand);
+    Mtx_PerspTilt(&projection, C3D_AngleFromDegrees(80.0f), C3D_AspectRatioTop, 0.01f, 1000.0f, false);
 
     // Material
     static const C3D_Material material = {
