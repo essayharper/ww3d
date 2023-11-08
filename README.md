@@ -28,5 +28,5 @@ You will obtain the .3dsx version of WW3D, for the .cia version you need makerom
 <tr><td>essayharper(3D Modeler, Texture/Ui Design)</td><td>https://github.com/essayharper https://youtube.com/@essayharper (channel plug)</td></tr> 
 <tr><td>atesquik(Programmer, Ui Design)</td><td>https://github.com/atesquik</td></tr>
 <tr><td>Rayz0rum(Texture/Ui Design)</td><td>https://github.com/Spider-Sonic</td></tr> 
-<tr><td>The Sleety(Programmer)</td><td>https://discord.gg/DU4Ms2W5Yk (Discord Server)</td></tr>
+<tr><td>The Sleety(Programmer)</td><td>https://github.com/The-Sleety</td></tr>
 </table>
