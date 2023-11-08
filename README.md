@@ -17,6 +17,7 @@ You will obtain the .3dsx version of WW3D, for the .cia version you need makerom
 <tr><td>libctru</td><td>https://github.com/devkitPro/libctru</td></tr>
 <tr><td>citro3d</td><td>https://github.com/devkitPro/citro3d</td></tr>
 <tr><td>citro2d</td><td>https://github.com/devkitPro/citro2d</td></tr>
+<tr><td>libcwav</td><td>https://github.com/PabloMK7/libcwav</td></tr>
 <tr><td>cwavtool</td><td>https://github.com/PabloMK7/cwavtool</td></tr>
 <tr><td>Blender</td><td>https://blender.org</td></tr>
 <tr><td>SketchUp</td><td>https://www.sketchup.com/</td></tr></table>
