@@ -12,7 +12,7 @@
 #include <gfx/model.h>
 
 // Helper function for loading a texture from memory
-bool loadTexFromMem(C3D_Tex* tex, C3D_TexCube* cube, const void* data, size_t size) {
+bool model::loadTexFromMem(C3D_Tex* tex, C3D_TexCube* cube, const void* data, size_t size) {
     Tex3DS_Texture t3x = Tex3DS_TextureImport(data, size, tex, cube, false);
     if (!t3x)
         return false;
