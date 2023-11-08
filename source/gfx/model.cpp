@@ -68,17 +68,18 @@ model::model(std::string filename) {
 };
 
 void model::render(gfx::GFX &gfx) {
-    // Configure attributes for use with the vertex shader
+        // Configure attributes for use with the vertex shader
 	C3D_AttrInfo* attrInfo = C3D_GetAttrInfo();
 	AttrInfo_Init(attrInfo);
 	AttrInfo_AddLoader(attrInfo, 0, GPU_FLOAT, 3); // V0 = Position
 	AttrInfo_AddLoader(attrInfo, 1, GPU_FLOAT, 2); // V1 = Texcoords
 	AttrInfo_AddLoader(attrInfo, 2, GPU_FLOAT, 3); // V2 = Normals
 
-    // Configure buffers
+        // Configure buffers
 	C3D_BufInfo* bufInfo = C3D_GetBufInfo();
 	BufInfo_Init(bufInfo);
 	BufInfo_Add(bufInfo, &gfx::GFX::vbo_data, sizeof(vertex), 3, 0x210);
+	C3D_SetBufInfo(bufInfo);
 
 	C3D_TexEnv* env = C3D_GetTexEnv(0);
 	C3D_TexEnvInit(env);
