@@ -1,1 +1,6 @@
-# Imagine this was a file
+# MDLF Model Format by Lollio64
+# Written manually
+
+v -0.5 -0.5 0.5 | 0.0 0.0 | 0.0 0.0 1.0
+v 0.5 -0.5 0.5 | 1.0 0.0 | 0.0 0.0 1.0
+v 0.5 0.5 0.5 | 1.0 1.0 | 0.0 0.0 1.0
