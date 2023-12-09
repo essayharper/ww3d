@@ -11,8 +11,9 @@ Despite essayharper's limited knowledge about the inner workings of the Gamecube
 ## Building Info
 Tutorial on how to build the game:
 - First install the devkitARM toolchains and 3DS libraries on you system.<br>
-- Here is a installation guide: [Click here](https://www.3dbrew.org/wiki/Setting_up_Development_Environment).<br>
-- Then run the Makefile....For Windows you probably need Windows Subsystem for Linux.<br>
+- Here is a installation guide from 3dbrew: [Click here](https://www.3dbrew.org/wiki/Setting_up_Development_Environment).<br>
+- Then install libcwav from GitHub, link down below.<br>
+- Then run the Makefile with the ```make``` command.<br>
 - You will obtain the .3dsx version of WW3D, for the .cia version you need makerom.<br>
 ## Credits
 ### Tools and Libraries
