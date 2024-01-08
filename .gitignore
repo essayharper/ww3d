@@ -1,0 +1,16 @@
+# Ignore VSCode and build files
+.vscode/
+build/
+
+# Ignore compiled binaries
+*.cia
+*.elf
+*.3dsx
+*.smdh
+
+# Misc
+*.png
+*.wav
+*.bnr 
+*.cgfx
+*.exe
